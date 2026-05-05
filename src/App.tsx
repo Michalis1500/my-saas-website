@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { Overlay } from './components/Overlay';
 import ASMRBackground from './components/ui/asmr-background';
 import { ArchitectureManifesto } from './pages/ArchitectureManifesto';
@@ -39,6 +40,7 @@ export default function App() {
         <Route path="/manifesto" element={<ArchitectureManifesto />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Analytics />
     </BrowserRouter>
   );
 }
