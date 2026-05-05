@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { Overlay } from './components/Overlay';
 import ASMRBackground from './components/ui/asmr-background';
 import { ArchitectureManifesto } from './pages/ArchitectureManifesto';
@@ -34,6 +35,7 @@ function LandingPage() {
 export default function App() {
   return (
     <BrowserRouter>
+      <Analytics />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/manifesto" element={<ArchitectureManifesto />} />
